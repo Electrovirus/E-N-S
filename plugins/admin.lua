@@ -41,7 +41,7 @@ local function logrem(msg)
 	end
 	data[tostring(GBan_log)][tostring(msg.to.id)] = nil
 	save_data(_config.moderation.data, data)
-	local text = 'Log_SuperGroup has has been removed!'
+	local text = 'Log_SuperGroup has has been removed!✟'
 	reply_msg(msg.id,text,ok_cb,false)
 	return
 end
