@@ -50,7 +50,7 @@ local function list_plugins(only_enabled)
   local text = ''
   local nsum = 0
   for k, v in pairs( plugins_names( )) do
-    --  ✅ enabled, ⛔️ disabled
+    -- ✅ enabled, ⛔️ disabled
     local status = '⛔️'
     nsum = nsum+1
     nact = 0
