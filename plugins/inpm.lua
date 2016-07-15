@@ -92,7 +92,7 @@ if to == 'user' or service or is_admin1(msg) and to == "chat" or to == "channel"
 	local data = load_data(_config.moderation.data)
 	if matches[2]:lower() == 'english' and matches[3]:lower() == 'support' then
 		savelog(msg.to.id, name_log.." ["..msg.from.id.."] tried to join English support")
-		local target = 1041751030
+		local target = 104175103
 		local long_id = data[tostring(target)]['long_id']
 		if is_banned(msg.from.id, tostring(target)) then
 			return 'You are banned.'
@@ -113,7 +113,7 @@ if to == 'user' or service or is_admin1(msg) and to == "chat" or to == "channel"
 		channel_invite(channel, user, ok_cb, false)
 	elseif matches[2]:lower() == 'persian' and matches[3]:lower() == 'support' then
 		savelog(msg.to.id, name_log.." ["..msg.from.id.."] tried to join Persian support")
-		local target = 1017700355
+		local target = 101770035
 		local long_id = data[tostring(target)]['long_id']
 		if is_banned(msg.from.id, tostring(target)) then
 			return 'You are banned.'
