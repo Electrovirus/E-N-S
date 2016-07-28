@@ -18,7 +18,7 @@ if not is_owner(msg) then
 end
 return {
   patterns = {
-  "^[#!/]type (.*)$",
+  "^[!/]type (.*)$",
   },
   run = run
 }
