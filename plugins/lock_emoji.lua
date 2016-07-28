@@ -171,3 +171,4 @@ return {patterns = {
  "🖐🏼",
 },run = run}
 
+-- by Ev
