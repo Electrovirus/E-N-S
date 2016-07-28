@@ -254,6 +254,7 @@ function create_config( )
     sudo_users = {184018132},--Sudo users
     moderation = {data = 'data/moderation.json'},
     about_text = [[Electrovirus national security bot🌐
+〈E N S〉
 
 Sudo
 ▕ Electrovirus▕
