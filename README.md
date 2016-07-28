@@ -1,6 +1,6 @@
-Ibot
+Electrovirus national security
 
-**An advanced and powerful administration bot based on [yagop/telegram-bot](https://github.com/yagop/telegram-bot) licensed under the [GNU General Public License](https://github.com/hafez16/mega-shield/blob/supergroups/LICENSE)**.
+**An advanced and powerful administration bot based on [yagop/telegram-bot](https://github.com/yagop/telegram-bot) licensed under the GNU General Public License**.
 
 | Command | Description |
 |:--------|:------------|
@@ -236,41 +236,4 @@ sudo apt-get update; sudo apt-get upgrade -y --force-yes; sudo apt-get dist-upgr
 
 * * *
 
-### Realm configuration
-
-After you run the bot for first time, send it `!id`. Get your ID and stop the bot.
-
-Open ./data/config.lua and add your ID to the "sudo_users" section in the following format:
-```
-  sudo_users = {
-    110626080,
-    103649648,
-    111020322,
-    0,
-    YourID
-  }
-```
-Then restart the bot.
-
-Create a realm using the `!createrealm` command.
-
-* * *
-
-**Creating a LOG SuperGroup**
-	-For GBan Log
-
-	1. Create a group using the `!creategroup` command.
-	2. Add two members or bots, then use `#Tosuper` to convert to a SuperSroup.
-	3. Use the `#addlog` command and your ***LOG SuperGroup(s)*** will be set.
-	Note: you can set multiple Log SuperGroups
-
-* * *
-
-# Support and development
-
-Check out this [tutorial by Telegram Geeks](http://telegramgeeks.com/2016/01/teleseed-tutorial/) for further assistance with setup and installation.
-
-[hafez (developer)](https://telegram.me/hafez1116hafez)
-[amir hosein (developer)](https://telegram.me/amirho3ien911)
-[mostafa (manager)](https://telegram.me/Eblis_alone)
-[mohammad (sponsor)](https://telegram.me/Mmd_hei)
+Dev by @Electrovirus
