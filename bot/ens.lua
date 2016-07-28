@@ -253,7 +253,15 @@ function create_config( )
     },
     sudo_users = {184018132},--Sudo users
     moderation = {data = 'data/moderation.json'},
-    about_text = [[ibot based on teleseed by Electrovirus
+    about_text = [[Electrovirus national security bot🌐
+
+Sudo
+▕ Electrovirus▕
+
+Github
+▕ https://github.com/Electrovirus/E-N-S.git
+
+┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅
 ]],
     help_text_realm = [[
 Realm Commands:
@@ -340,11 +348,11 @@ This command will send text to [group_id]
 ]],
     help_text = [[
 Not allowed for you🚫
-Needs Sudo🗽
+Needs Sudo Acces🗽
 ]],
 	help_text_super =[[
 Not allowed for you🚫
-Needs Sudo🗽
+Needs Sudo Acces🗽
 ]],
   }
   serialize_to_file(config, './data/config.lua')
