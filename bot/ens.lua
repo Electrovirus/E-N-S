@@ -348,12 +348,12 @@ This command will send text to [group_id]
 *Only admins and sudo can use res, setowner, commands
 ]],
     help_text = [[
-Not allowed for you🚫
-Needs Sudo Acces🗽
+To see bot commands 🔰
+Checkout this channel 👉 @Ens_Commands
 ]],
 	help_text_super =[[
-Not allowed for you🚫
-Needs Sudo Acces🗽
+To see bot commands 🔰
+Checkout this channel 👉 @Ens_Commands
 ]],
   }
   serialize_to_file(config, './data/config.lua')
