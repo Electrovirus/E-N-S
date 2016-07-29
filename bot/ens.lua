@@ -254,7 +254,7 @@ function create_config( )
     sudo_users = {184018132},--Sudo users
     moderation = {data = 'data/moderation.json'},
     about_text = [[Electrovirus national security bot🌐
-〈E N S〉
+ E N S
 
 Sudo
 ▕ Electrovirus▕
@@ -337,15 +337,7 @@ Only sudo users can run this command
 This command will send text to [group_id]
 
 
-**You can use "#", "!", or "/" to begin all commands
-
-
-*Only admins and sudo can add bots in group
-
-
-*Only admins and sudo can use kick,ban,unban,newlink,setphoto,setname,lock,unlock,set rules,set about and settings commands
-
-*Only admins and sudo can use res, setowner, commands
+Check @Ens_Commands
 ]],
     help_text = [[
 To see bot commands 🔰
