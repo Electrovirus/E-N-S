@@ -9,8 +9,8 @@ do
   description = "!nerkh",
   usage = " !nerkh",
   patterns = {
-    "^[#/!][Nn]erkh$",
-	"^[Nn]erkh$"
+    "^[#/!][Pp]rice$",
+	"^[Pp]rice$"
   },
   run = run
 }
