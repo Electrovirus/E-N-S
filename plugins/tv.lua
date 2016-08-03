@@ -41,7 +41,7 @@ http://s5.telewebion.com:1935/devices/bck2varzesh-300k.stream/playlist.m3u8?wmsA
 _________________________
 پخش زنده شبکه اصفهان 💠
 http://s11.telewebion.com:1935/devices/esfahan-300k.stream/playlist.m3u8?wmsAuthSign=aXNfZnJlZT0xJnNlcnZlcl90aW1lPTgvMjAvMjAxNSA4OjU0OjI2IEFNJmhhc2hfdmFsdWU9bGdzbFBXLzBEZVNjV3QyaWxOcnVTQT09JnZhbGlkbWludXRlcz02MDAw
-Asimo Bot @AsimoTeam
+E•N•S Bot
 ]]
 return text
 end
