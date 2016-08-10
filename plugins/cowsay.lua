@@ -5,7 +5,7 @@ text = io.popen("cowsay " .. matches[1]):read('*all')
 end
 return {
   patterns = {
-    '^cowsay (.*)$'
+    '^[!/#](cowsay) (.*)$'
   },
   run = run,
   moderated = true
