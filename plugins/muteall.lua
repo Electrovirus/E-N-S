@@ -14,9 +14,16 @@ local function run(msg, matches)
               redis:set(hash, true)
              return "mute all has been enabled"
  else
- local num = tonumber(matches[2]) * 60
- redis:setex(hash, num, true)
- return "mute all has been enabled for |#"..matches[2].."#| minutes"
+ 
+local hour = string.gsub(matches[2], 'h', '')
+ local num1 = tonumber(hour) * 3600
+local minutes = string.gsub(matches[3], 'm', '')
+ local num2 = tonumber(minutes) * 60
+local second = string.gsub(matches[4], 's', '')
+ local num3 = tonumber(second) 
+local num4 = tonumber(num1 + num2 + num3)
+redis:setex(hash, num4, true)
+ return "👥Group Mute By |"..msg.from.id.."|\n🔆Time For Mute Group :\n"..matches[2]..":"..matches[3]..":"..matches[4].."\n➖➖➖➖➖➖➖➖➖➖➖\n @ENS_Tg"
  end
  end
 if matches[1] == 'unmuteall' and is_momod(msg) then
@@ -29,7 +36,7 @@ return {
    patterns = {
       '^[/!#](muteall)$',
       '^[/!#](unmuteall)$',
-   '^[/!#](muteall) (%d+)$',
+   '^[/!#](muteall) (.*) (.*) (.*)$',
  },
 run = run,
   pre_process = pre_process
