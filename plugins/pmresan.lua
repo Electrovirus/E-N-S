@@ -14,7 +14,7 @@ local msg = extra
 function run(msg, matches) 
   if msg.to.type == "user" and msg.text then
 fwd_msg("user#id"..tonumber(fwd_to), msg.id,ok_cb,false)
-  return 'پیام شما برای ادمین ارسال شد'
+  return '🔔Your message was forwarded to sudo'
 elseif msg.text and msg.reply_id and tonumber(msg.to.id) == fwd_to then
     if not msg.text then
     return "You can only send Text message" 
