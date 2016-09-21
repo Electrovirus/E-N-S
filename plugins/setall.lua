@@ -62,7 +62,7 @@ return 'Send Your Text Now 📌'
 else
 if redis:get(hashver) == 'waiting:'..msg.from.id then
 redis:set(hashver,msg.text)
-return 'انجام شد!'
+return 'Done!'
 end
 end
 
