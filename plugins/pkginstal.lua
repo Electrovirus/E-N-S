@@ -3,11 +3,11 @@ if not is_sudo(msg) then
 return 
 end
 text = io.popen("sudo apt-get install "..matches[1]):read('*all')
-  return text
+  return "🔐packages succesfuly instaled"..text
 end
 return {
   patterns = {
-    '^[#/!$]install (.*)$'
+    '^[#/!]install (.*)$'
   },
   run = run,
   moderated = true
