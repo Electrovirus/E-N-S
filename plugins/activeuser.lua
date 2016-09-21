@@ -165,10 +165,10 @@ maxname[2] = user.print_name
 	else
 	maxuser[3] = '@'..maxuser[3]
 end
-local text = '♨️فعالان امروز گروه\n1⃣ '..maxname[1]..'〖'..maxuser[1]..'〗\n\n📨تعداد پیام های ارسالی: '..maxtex[1] + maxph[1] + maxst[1] + maxoth[1]..'\n\n👾استیکر: '..maxst[1]..'\n\n📷تصویر: '..maxph[1]..'\n\n📃 متن: '..maxtex[1]..'\n\n📦 سایر: '..maxoth[1]
+local text = '♨️Group most active members\n1⃣ '..maxname[1]..'〖'..maxuser[1]..'〗\n\n📨Sent messages: '..maxtex[1] + maxph[1] + maxst[1] + maxoth[1]..'\n\n👾Stickers: '..maxst[1]..'\n\n📷Pictures: '..maxph[1]..'\n\n📃 Text: '..maxtex[1]..'\n\n📦 Others: '..maxoth[1]
 if maxid[2] then
 	if not maxid[3] then
-text = text..'\n\n 2⃣ '..maxname[2]..' 〖'..maxuser[2]..'〗\n\n📨تعداد پیام های ارسالی: '..maxtex[2] + maxph[2] + maxst[2] + maxoth[2]..'\n\n👾استیکر: '..maxst[2]..'\n\n📷تصویر: '..maxph[2]..'\n\n📃 متن: '..maxtex[2]..'\n\n📦 سایر: '..maxoth[2]
+text = text..'\n\n 2⃣ '..maxname[2]..' 〖'..maxuser[2]..'〗\n\n📨Sent messages: '..maxtex[2] + maxph[2] + maxst[2] + maxoth[2]..'\n\n👾Stickers: '..maxst[2]..'\n\n📷Pictures: '..maxph[2]..'\n\n📃 Text: '..maxtex[2]..'\n\n📦 Others: '..maxoth[2]
 else
 text = text..'\n\n 2⃣ '..maxname[2]..' 〖'..maxuser[2]..'〗\n\n📨تعداد پیام های ارسالی: '..maxtex[2] + maxph[2] + maxst[2] + maxoth[2]..'\n\n👾استیکر: '..maxst[2]..'\n\n📷تصویر: '..maxph[2]..'\n\n📃 متن: '..maxtex[2]..'\n\n📦 سایر: '..maxoth[2]..'\n\n 3⃣ '..maxname[3]..' 〖'..maxuser[3]..'〗\n\n📨تعداد پیام های ارسالی: '..maxtex[3] + maxph[3] + maxst[3] + maxoth[3]..'\n\n👾استیکر: '..maxst[3]..'\n\n📷تصویر: '..maxph[3]..'\n\n📃 متن: '..maxtex[3]..'\n\n📦 سایر: '..maxoth[3]
 end
@@ -270,12 +270,12 @@ maxname[2] = user.print_name
 	else
 	maxuser[3] = '@'..maxuser[3]
 end
-local text = '♨️فعالان امروز گروه\n1⃣ '..maxname[1]..'〖'..maxuser[1]..'〗\n\n📨تعداد پیام های ارسالی: '..maxtex[1] + maxph[1] + maxst[1] + maxoth[1]..'\n\n👾استیکر: '..maxst[1]..'\n\n📷تصویر: '..maxph[1]..'\n\n📃 متن: '..maxtex[1]..'\n\n📦 سایر: '..maxoth[1]
+local text = '♨️Group most active members\n1⃣ '..maxname[1]..'〖'..maxuser[1]..'〗\n\n📨Sent messages: '..maxtex[1] + maxph[1] + maxst[1] + maxoth[1]..'\n\n👾Stickers: '..maxst[1]..'\n\n📷Pictures: '..maxph[1]..'\n\n📃 Text: '..maxtex[1]..'\n\n📦 Others: '..maxoth[1]
 if maxid[2] then
 	if not maxid[3] then
-text = text..'\n\n 2⃣ '..maxname[2]..' 〖'..maxuser[2]..'〗\n\n📨تعداد پیام های ارسالی: '..maxtex[2] + maxph[2] + maxst[2] + maxoth[2]..'\n\n👾استیکر: '..maxst[2]..'\n\n📷تصویر: '..maxph[2]..'\n\n📃 متن: '..maxtex[2]..'\n\n📦 سایر: '..maxoth[2]
+text = text..'\n\n 2⃣ '..maxname[2]..' 〖'..maxuser[2]..'〗\n\n📨Sent messages: '..maxtex[2] + maxph[2] + maxst[2] + maxoth[2]..'\n\n👾Stickers: '..maxst[2]..'\n\n📷Pictures: '..maxph[2]..'\n\n📃 Text: '..maxtex[2]..'\n\n📦 Others: '..maxoth[2]
 else
-text = text..'\n\n 2⃣ '..maxname[2]..' 〖'..maxuser[2]..'〗\n\n📨تعداد پیام های ارسالی: '..maxtex[2] + maxph[2] + maxst[2] + maxoth[2]..'\n\n👾استیکر: '..maxst[2]..'\n\n📷تصویر: '..maxph[2]..'\n\n📃 متن: '..maxtex[2]..'\n\n📦 سایر: '..maxoth[2]..'\n\n 3⃣ '..maxname[3]..' 〖'..maxuser[3]..'〗\n\n📨تعداد پیام های ارسالی: '..maxtex[3] + maxph[3] + maxst[3] + maxoth[3]..'\n\n👾استیکر: '..maxst[3]..'\n\n📷تصویر: '..maxph[3]..'\n\n📃 متن: '..maxtex[3]..'\n\n📦 سایر: '..maxoth[3]
+text = text..'\n\n 2⃣ '..maxname[2]..' 〖'..maxuser[2]..'〗\n\n📨Sent messages: '..maxtex[2] + maxph[2] + maxst[2] + maxoth[2]..'\n\n👾Stickers: '..maxst[2]..'\n\n📷Pictures: '..maxph[2]..'\n\n📃 Text: '..maxtex[2]..'\n\n📦 Others: '..maxoth[2]..'\n\n 3⃣ '..maxname[3]..' 〖'..maxuser[3]..'〗\n\n📨Sent messages: '..maxtex[3] + maxph[3] + maxst[3] + maxoth[3]..'\n\n👾Stickers: '..maxst[3]..'\n\n📷Pictures: '..maxph[3]..'\n\n📃 Text: '..maxtex[3]..'\n\n📦 Others: '..maxoth[3]
 end
 end
 send_msg('channel#id'..cb_extra, text, ok_cb, true)
