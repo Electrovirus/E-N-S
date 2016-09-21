@@ -8,7 +8,7 @@ local function set_pass(msg, pass, id)
   local name = string.gsub(msg.to.print_name, '_', '')
   if hash then
     redis:hset(hash, pass, id)
-      return send_large_msg("channel#id"..msg.to.id, "رمز گروه/سوپر گروه : ["..name.."] تغییر داده شد به:\n> "..pass.."\n\nحالا میتوانید با ارسال کامند \n#join "..pass.." در خصوصی بات, وارد گروه شوید. ", ok_cb, true)
+      return send_large_msg("channel#id"..msg.to.id, "✔Group/Supergroup password is changed to 《"..pass.."》 ", ok_cb, true)
   end
 end
 
@@ -20,7 +20,7 @@ end
 local function show_add(cb_extra, success, result)
   vardump(result)
     local receiver = cb_extra.receiver
-    local text = "شما ادد شدید به: "..result.title
+    local text = "✔You were added to: "..result.title
     send_large_msg(receiver, text)
 end
 local function added(msg, target)
@@ -32,7 +32,7 @@ local function run(msg, matches)
     local pass = matches[2]
     local id = msg.to.id
     if is_used(pass) then
-      return "این رمز قبلا استفاده شده است. "
+      return "This password is used before❎ "
     end
     redis:del("setpass:", id)
     return set_pass(msg, pass, id)
@@ -43,19 +43,19 @@ local function run(msg, matches)
     local id = redis:hget(hash, pass)
     local receiver = get_receiver(msg)
     if not id then
-      return "مشکل: گروهی با این رمز پیدا نشد. شاید رمز گروه تغییر کرده یا رمز را اشتباه وارد کرده اید"
+      return "❎Error\nThere is no group with this password"
     end
     channel_invite("channel#id"..id, "user#id"..msg.from.id, ok_cb, false) 
   return added(msg, id)
   else
-  return "متاسفم, اما من نتوانستم شمارو ادد کنم به "..string.gsub(msg.to.id.print_name, '_', ' ')
+  return "❎Sorry,i could not add you to "..string.gsub(msg.to.id.print_name, '_', ' ')
   end
   if matches[1] == "pass" then
    local hash = 'setpass:'
    local chat_id = msg.to.id
    local pass = redis:hget(hash, channel_id)
    local receiver = get_receiver(msg)
-   send_large_msg(receiver, "رمز گروه/سوپر گروه : ["..msg.to.print_name.."]\n\nرمز: > "..pass)
+   send_large_msg(receiver, "♻Group/Supergroup password : ["..msg.to.print_name.."]\n\n🔸Password: > "..pass)
  end
 end
 
