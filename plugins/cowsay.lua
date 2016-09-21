@@ -1,6 +1,5 @@
 function run(msg, matches)
-text = io.popen("cowsay " .. matches[1]):read('*all')
-end
+text = io.popen("cowsay " .. matches[2]):read('*all')
   return text
 end
 return {
