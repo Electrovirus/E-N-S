@@ -56,7 +56,7 @@ end
       local hashs = 'msgs:'..result.peer_id..':'..extra.msg.to.id
       local msgss = redis:get(hashs)
       local percent = msgss / r * 100
-    return send_large_msg(chatid, "🌎Your Name "..name.."\n➖➖➖➖➖➖➖➖➖➖\n🌎The number of messages you ( "..msgss.." ) {"..round2(in).."/💯}\n➖➖➖➖➖➖➖➖➖➖\n🌎The number of messages in the group "..r.."")
+    return send_large_msg(chatid, "🌎Your Name "..name.."\n➖➖➖➖➖➖➖➖➖➖\n🌎The number of messages you ( "..msgss.." ) {"..round2(per).."/💯}\n➖➖➖➖➖➖➖➖➖➖\n🌎The number of messages in the group "..r.."")
 
     end
 end
