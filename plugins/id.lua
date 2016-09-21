@@ -6,7 +6,7 @@ return {
   description = "info", 
   usage = "info",
   patterns = {
-    "^[!#/]([Ii][Dd][Ss])$",
+    "^[!#/]([Ii]dentify)$",
   },
   run = run
 }
