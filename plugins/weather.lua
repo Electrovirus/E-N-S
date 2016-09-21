@@ -12,19 +12,19 @@ local function get_weather(location)
   local weather = json:decode(b)
   local city = weather.name
   local country = weather.sys.country
-  local temp = 'دمای شهر '..city..' هم اکنون '..weather.main.temp..' درجه است  \n '
-  local conditions = 'شرایط فعلی آب و هوا : '
+  local temp = '🌅Temperature of '..city..' is now '..weather.main.temp..' degree  \n '
+  local conditions = '🌄Local air conditions : '
 
   if weather.weather[1].main == 'Clear' then
-    conditions = conditions .. 'آفتابی ☀'
+    conditions = conditions .. 'Sunny ☀'
   elseif weather.weather[1].main == 'Clouds' then
-    conditions = conditions .. 'ابری ☁☁'
+    conditions = conditions .. 'Cloudy ☁☁'
   elseif weather.weather[1].main == 'Rain' then
-    conditions = conditions .. 'بارانی ☔'
+    conditions = conditions .. 'Rainy ☔'
   elseif weather.weather[1].main == 'Thunderstorm' then
-    conditions = conditions .. 'طوفانی ☔☔☔☔'
+    conditions = conditions .. 'Thunderstorm ☔☔☔☔'
   elseif weather.weather[1].main == 'Mist' then
-    conditions = conditions .. 'مه 💨'
+    conditions = conditions .. 'Fogy 💨'
   end
 
   return temp .. '\n' .. conditions
@@ -33,7 +33,7 @@ local function run(msg, matches)
     city = matches[1]
   local wtext = get_weather(city)
   if not wtext then
-    wtext = 'مکان وارد شده صحیح نیست'
+    wtext = '❎The place you entered is not correct'
   end
   return wtext
 end
