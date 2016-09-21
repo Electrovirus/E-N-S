@@ -1,14 +1,12 @@
 do
-function run(msg,match)
-if matches[1] == "id" then
- return "════════════════════════\n👤"..msg.from.first_name.."━"..msg.from.last_name.."\n📶"..msg.from.username.."\n🆔"..msg.from.id.."\n════════════════════════\n👥"..msg.to.title.."\n🆔"..msg.to.id.."\n════════════════════════"
-end
+function run(msg, matches)
+  return "════════════════════════\n👤"..msg.from.first_name.."━"..msg.from.last_name.."\n📶"..(msg.from.username or -).."\n🆔"..msg.from.id.."\n════════════════════════\n👥"..msg.to.title.."\n🆔"..msg.to.id.."\n════════════════════════"
 end
 return {
-  description = "id", 
-  usage = "id",
+  description = "info", 
+  usage = "info",
   patterns = {
-    "^[!#/](.*)$",
+    "^[!#/]([Ii][Nn][Ff][Oo])$",
   },
   run = run
 }
