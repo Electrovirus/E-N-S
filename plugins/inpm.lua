@@ -250,7 +250,6 @@ return {
     "^[#!/](chatlist)$",
     "^[#!/](join) (%d+)$",
 	"^[#!/](join) (.*) (support)$",
-    "^[#!/](kickme) (.*)$",
     "^!!tgservice (chat_add_user)$",
     },
     run = run,
