@@ -14,9 +14,9 @@ local function warn_by_username(extra, success, result) -- /warn <@username>
   end
 ----------------------------------
   if is_momod2(msg.id, target) and not is_admin2(extra.fromid) then
-  return send_msg(receiver, 'شما نمیتوانید به مدیر گروه اخطار بدهید!', ok_cb, false) end
+  return send_msg(receiver, '💢You can not warn moderator!', ok_cb, false) end
 --endif--
-  if is_admin2(msg.id) then return send_msg(receiver, 'شما نمیتوانید به ادمین ربات اخطار بدهید!', ok_cb, false) end
+  if is_admin2(msg.id) then return send_msg(receiver, '💢You can not warn admin!', ok_cb, false) end
 --endif--
   if value then
    if value == '1' then
