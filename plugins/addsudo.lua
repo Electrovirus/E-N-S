@@ -9,13 +9,13 @@ end
       print(matches[2]..' added to sudo users')
      save_config()
      reload_plugins(true)
-      return matches[2]..' added to sudo users'
+      return '📟"..matches[2].." added to sudo users'
    elseif matches[1]:lower() == "remsudo" then
       table.remove(_config.sudo_users, tonumber(matches[2]))
       print(matches[2]..' removed from sudo users')
      save_config()
      reload_plugins(true)
-      return matches[2]..' removed from sudo users'
+      return '📟"..matches[2].." removed from sudo users'
       end
    end
 end
