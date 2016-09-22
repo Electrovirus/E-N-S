@@ -39,7 +39,7 @@ local function check_member_super(cb_extra, success, result)
       end
       data[tostring(groups)][tostring(msg.to.id)] = msg.to.id
       save_data(_config.moderation.data, data)
-	  local text = '⚡SuperGroup 『《"..msg.to.title.."》〈"..msg.to.id.."〉』\n🍃Has been added to moderated groups \n🌎By 「【@"..msg.from.username.."】〖"..msg.from.id.."〗」.\n📟Use /setexpire (value) to set expire date for the group \n📌Use /type (gptype) to set group type.'
+	  local text = '⚡SuperGroup Has been added to moderated groups \n🌎By 「【@Electrovirus】〖184018132〗」.\n📟Use /setexpire (value) to set expire date for the group \n📌Use /type (gptype) to set group type.'
       return reply_msg(msg.id, text, ok_cb, false)
     end
   end
