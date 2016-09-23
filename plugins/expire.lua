@@ -57,15 +57,15 @@ function run(msg, matches)
 		local expiretime = redis:hget ('expiretime', get_receiver(msg))
 		if not expiretime then return '📈Expire date is not set yet.' else
 			local now = tonumber(os.time())
-			return (math.floor((tonumber(expiretime) - tonumber(now)) / 86400) + 1) .. " روز دیگر"
+			return (math.floor((tonumber(expiretime) - tonumber(now)) / 86400) + 1) .. " Days left🔱"
 		end
 	end
 
 end
 return {
   patterns = {
-    "^[!/]([Ss]etexpire) (.*)$",
-	"^[!/]([Ee]xpire)$",
+    "^[!/#]([Ss]etexpire) (.*)$",
+	"^[!/#]([Ee]xpire)$",
   },
   run = run,
   pre_process = pre_process
