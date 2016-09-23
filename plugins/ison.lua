@@ -1,7 +1,7 @@
 do
 
 function run(msg, matches)
-  return "Bot is online 🔰 You are safe"
+  return "Bot is online 🔰 You are safe\n❄@Ens_Tg❄"
 end
 
 return {
