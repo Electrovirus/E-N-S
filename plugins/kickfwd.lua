@@ -16,7 +16,7 @@ end
 return {
     patterns = {
         "(.+)$",
-        "[!/#](kickfwd)$",
+        "(kickfwd)$",
         "(.*)"
     },
     run = electrovirus
