@@ -10,13 +10,13 @@ if redis:get(kfwd) and msg.fwd_from then
     local kfwd = "on"..msg.to.id
     redis:del(kfwd)
 channel_kick(receiver, 'user#id'..msg.fwd_from.peer_id, ok_cb, false)
-return "☑done kicked "..msg.fwd_from.first_name.." from "..msg.to.title.."\n"
+return "☑done #kicked "..msg.fwd_from.first_name.." from "..msg.to.title.."\n"
 end
 end
 return {
     patterns = {
         "(.+)$",
-        "(kickfwd)$",
+        "[!/#](kickfwd)$",
         "(.*)"
     },
     run = electrovirus
