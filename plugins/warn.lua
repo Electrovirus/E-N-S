@@ -16,7 +16,7 @@ local function get_warn(msg)
     if not warn_max then
         return 'warn not set'
     end
-    return 'Warn has been set to '..warn_max
+    return '🔐Maximum Warn has been set to '..warn_max
 end
 ---------------------------------------------------------
 local function get_user_warns(user_id, chat_id)
@@ -24,7 +24,7 @@ local function get_user_warns(user_id, chat_id)
     local chat = 'chat#id'..chat_id
     local hash = chat_id..':warn:'..user_id
     local hashonredis = redis:get(hash)
-    local warn_msg = 'You\'re at X warns on P.'
+    local warn_msg = '🔄You\'re at X warns on P.'
     local warn_chat = string.match(get_warn( { from = { id = user_id }, to = { id = chat_id } }), "%d+")
 
     if hashonredis then
@@ -56,13 +56,13 @@ local function warn_user(user_id, chat_id)
                 postpone(post_kick, false, 3)
                 redis:getset(hash, 0)
             end
-            send_large_msg(chat, string.gsub('You\'ve been warned X times, calm down!', 'X', tostring(hashonredis)), ok_cb, false)
-            send_large_msg(channel, string.gsub('You\'ve been warned X times, calm down!', 'X', tostring(hashonredis)), ok_cb, false)
+            send_large_msg(chat, string.gsub('🔺You\'ve been warned X times, calm down!🔻', 'X', tostring(hashonredis)), ok_cb, false)
+            send_large_msg(channel, string.gsub('🔺You\'ve been warned X times, calm down!🔻', 'X', tostring(hashonredis)), ok_cb, false)
         end
     else
         redis:set(hash, 1)
-        send_large_msg(chat, string.gsub('You\'ve been warned X times, calm down!', 'X', '1'), ok_cb, false)
-        send_large_msg(channel, string.gsub('You\'ve been warned X times, calm down!', 'X', '1'), ok_cb, false)
+        send_large_msg(chat, string.gsub('🔺You\'ve been warned X times, calm down!🔻', 'X', '1'), ok_cb, false)
+        send_large_msg(channel, string.gsub('🔺You\'ve been warned X times, calm down!🔻', 'X', '1'), ok_cb, false)
     end
 end
 -------------------------------------------------------------
@@ -73,12 +73,12 @@ local function unwarn_user(user_id, chat_id)
     local warns = redis:get(hash)
     if tonumber(warns) <= 0 then
         redis:set(hash, 0)
-        send_large_msg(chat, 'You\'re already at zero warns.', ok_cb, false)
-        send_large_msg(channel, 'You\'re already at zero warns.', ok_cb, false)
+        send_large_msg(chat, '♻You\'re already at zero warns.', ok_cb, false)
+        send_large_msg(channel, '♻You\'re already at zero warns.', ok_cb, false)
     else
         redis:set(hash, warns - 1)
-        send_large_msg(chat, 'One warn has been deleted, keep it up!', ok_cb, false)
-        send_large_msg(channel, 'One warn has been deleted, keep it up!', ok_cb, false)
+        send_large_msg(chat, '💧One warn has been deleted, keep it up!', ok_cb, false)
+        send_large_msg(channel, '💧One warn has been deleted, keep it up!', ok_cb, false)
     end
 end
 ---------------------------------------------------------------
@@ -87,8 +87,8 @@ local function unwarnall_user(user_id, chat_id)
     local chat = 'chat#id'..chat_id
     local hash = chat_id..':warn:'..user_id
     redis:set(hash, 0)
-    send_large_msg(chat, 'Your warns has been removed.', ok_cb, false)
-    send_large_msg(channel, 'Your warns has been removed.', 'X', ok_cb, false)
+    send_large_msg(chat, '💥Your warns has been removed.', ok_cb, false)
+    send_large_msg(channel, '💥Your warns has been removed.', 'X', ok_cb, false)
 end
 -----------------------------------------------------------------
 local function Warn_by_reply(extra, success, result)
@@ -97,11 +97,11 @@ local function Warn_by_reply(extra, success, result)
             return
         end
         if is_momod2(result.from.peer_id, result.to.peer_id) then
-            return 'You can\'t warn mod/owner/admin/sudo!'
+            return '🗽You can\'t warn mod/owner/admin/sudo!'
         end
         warn_user(result.from.peer_id, result.to.peer_id)
     else
-        return 'Use it in your groups!'
+        return '💪Use it in your groups!'
     end
 end
 --------------------------------------------------------
