@@ -12,12 +12,12 @@ end
 if is_momod(msg) and matches[1] == "u" and matches[2] == "inline" then
 local inline = 'mate:'..msg.to.id
 redis:set(inline, true)
-return "🔓Inline is unlocked in this group By : @"..(msg.from.username or "--")
+return "🔓Inline is unlocked in this group By : @"..(msg.from.username)
 end
 if is_momod(msg) and matches[1] == "l" and matches[2] == "inline" then
     local inline = 'mate:'..msg.to.id
     redis:del(inline)
-    return = "🔒Inline is locked in this group By : @"..(msg.from.username or "--")
+    return = "🔒Inline is locked in this group By : @"..(msg.from.username)
   end
 end
 return {
