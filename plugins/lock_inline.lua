@@ -17,7 +17,7 @@ end
 if is_momod(msg) and matches[1] == "l" and matches[2] == "inline" then
     local inline = 'mate:'..msg.to.id
     redis:del(inline)
-    return = "🔒Inline is locked in this group By : @"..msg.from.username.." "
+    return "🔒Inline is locked in this group By : @"..msg.from.username.." "
   end
 end
 return {
