@@ -11,7 +11,7 @@ end
 return {
     patterns = {
         "^[/!#]porn (.*)",
-        "^[Pp]orn (.*)"
+        "^[PpP]orn (.*)"
     },
 run = run
 }
