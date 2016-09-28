@@ -862,6 +862,62 @@ local function disable_strict_rules(msg, data, target)
     return 'Settings will not be strictly enforced'
   end
 end
+
+local function lock_group_inline(msg, data, target)
+  if not is_momod(msg) then
+    return
+  end
+  local group_inline_lock = data[tostring(target)]['settings']['inline']
+  if group_inline_lock == 'yes' then
+    return 'inline is already locked'
+  else
+    data[tostring(target)]['settings']['inline'] = 'yes'
+    save_data(_config.moderation.data, data)
+    return 'inline has been locked'
+  end
+end
+
+local function unlock_group_inline(msg, data, target)
+  if not is_momod(msg) then
+    return
+  end
+  local group_reply_lock = data[tostring(target)]['settings']['inline']
+  if group_inline_lock == 'no' then
+    return 'inline is not locked'
+  else
+    data[tostring(target)]['settings']['inline'] = 'no'
+    save_data(_config.moderation.data, data)
+    return 'inline has been unlocked'
+  end
+end
+
+local function lock_group_cmd(msg, data, target)
+  if not is_momod(msg) then
+    return
+  end
+  local group_cmd_lock = data[tostring(target)]['settings']['cmd']
+  if group_cmd_lock == 'yes' then
+    return 'cmd is already locked'
+  else
+    data[tostring(target)]['settings']['cmd'] = 'yes'
+    save_data(_config.moderation.data, data)
+    return 'cmd has been locked'
+  end
+end
+
+local function unlock_group_cmd(msg, data, target)
+  if not is_momod(msg) then
+    return
+  end
+  local group_cmd_lock = data[tostring(target)]['settings']['cmd']
+  if group_cmd_lock == 'no' then
+    return 'cmd is not locked'
+  else
+    data[tostring(target)]['settings']['cmd'] = 'no'
+    save_data(_config.moderation.data, data)
+    return 'cmd has been unlocked'
+  end
+end
 --End supergroup locks
 
 --'Set supergroup rules' function
