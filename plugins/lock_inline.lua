@@ -8,13 +8,13 @@ end
     return msg
     end
     
- local function electrovirus(msg, matches)
-if is_momod(msg) and matches[1] == "unlock" and matches[2] == "inline" then
+ local function run(msg, matches)
+if is_momod(msg) and matches[1] == "u" and matches[2] == "inline" then
 local inline = 'mate:'..msg.to.id
 redis:set(inline, true)
-return "🔓Inline is unlocked in tgis group By : @"..(msg.from.username or "--")
+return "🔓Inline is unlocked in this group By : @"..(msg.from.username or "--")
 end
-if is_momod(msg) and matches[1] == "lock" and matches[2] == "inline" then
+if is_momod(msg) and matches[1] == "l" and matches[2] == "inline" then
     local inline = 'mate:'..msg.to.id
     redis:del(inline)
     return = "🔒Inline is locked in this group By : @"..(msg.from.username or "--")
@@ -22,10 +22,10 @@ if is_momod(msg) and matches[1] == "lock" and matches[2] == "inline" then
 end
 return {
     patterns ={
-        '^[/!#](unlock) (inline)$',
-        '^[/!#](lock) (inline)$',
+        '^[/!#](u)(inline)$',
+        '^[/!#](l)(inline)$',
     },
-run = electrovirus,
+run = run,
 pre_process = pre_process 
 }
 end
