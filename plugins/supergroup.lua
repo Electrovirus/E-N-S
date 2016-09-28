@@ -1086,10 +1086,20 @@ function show_supergroup_settingsmod(msg, target)
 			data[tostring(target)]['settings']['etehad'] = 'no'
 		end
 	end
+	if data[tostring(target)]['settings'] then
+		if not data[tostring(target)]['settings']['inline'] then
+			data[tostring(target)]['settings']['inline'] = 'no'
+		end
+        end
+	if data[tostring(target)]['settings'] then
+		if not data[tostring(target)]['settings']['cmd'] then
+			data[tostring(target)]['settings']['cmd'] = 'no'
+		end
+        end
   local gp_type = data[tostring(msg.to.id)]['group_type']
   
   local settings = data[tostring(target)]['settings']
-  local text = "════════════════════════\n🌐GROUP INFO∴\n 🔰Group name∶"..msg.to.title.."\n 🔰Group id∶"..msg.to.id.."\n 🔰Group type∶"..gp_type.."\n 🔰Public∶"..settings.public.."\n ════════════════════════\n ⚙GROUP SETTINGS∵\n 📍Lock links∶"..settings.lock_link.."\n 📍Lock contacts∶"..settings.lock_contacts.."\n 📍Lock member∶"..settings.lock_member.."\n 📍Lock Tgservice∶"..settings.lock_tgservice.."\n 📍Lock Hashtag (#)∶"..settings.tag.."\n 📍Lock emoji∶"..settings.emoji.."\n 📍Lock fwd∶"..settings.fwd.."\n 📍Lock reply∶"..settings.reply.."\n 📍Lock join∶"..settings.join.."\n 📍Lock username(@)∶"..settings.username.."\n 📍Lock leave∶"..settings.leave.."\n 📍Lock fosh∶"..settings.fosh.."\n 📍Lock bots∶"..bots_protection.."\n 📍Lock operators∶"..settings.operator.."\n ════════════════════════\n 🔨PROTECTION SETTINGS∴\n 🔺Spamming lock∶"..settings.lock_spam.."\n 🔻Flooding lock∶"..settings.flood.."\n 🔹Sensivity∶"..NUM_MSG_MAX.."\n ════════════════════════\n 👥CHARACTERS SETTINGS\n 👉ARABIC∶"..settings.lock_arabic.."\n 👉RTL∶"..settings.lock_rtl.."\n 👉ENGLISH∶"..settings.english.."\n ════════════════════════\n ♻️SWITCHES\n 🍃Lock all∶"..settings.all.."\n 🍃Lock Etehad∶"..settings.etehad.."\n 🍃Strict settings∶"..settings.strict.."\n ════════════════════════\n "..mutes_list(msg.to.id).."\n ▪️Media Unavailability∶"..settings.media.."\n ════════════════════════\n 🌎ABOUT DEVELOPER\n ❌Dev id∶  @Electrovirus\n ⭕️Dev channel∶ @Ev_official\n ════════════════════════"
+  local text = "════════════════════════\n🌐GROUP INFO∴\n 🔰Group name∶"..msg.to.title.."\n 🔰Group id∶"..msg.to.id.."\n 🔰Group type∶"..gp_type.."\n 🔰Public∶"..settings.public.."\n ════════════════════════\n ⚙GROUP SETTINGS∵\n 📍Lock links∶"..settings.lock_link.."\n 📍Lock contacts∶"..settings.lock_contacts.."\n 📍Lock member∶"..settings.lock_member.."\n 📍Lock Tgservice∶"..settings.lock_tgservice.."\n 📍Lock Hashtag (#)∶"..settings.tag.."\n 📍Lock emoji∶"..settings.emoji.."\n 📍Lock fwd∶"..settings.fwd.."\n 📍Lock reply∶"..settings.reply.."\n 📍Lock join∶"..settings.join.."\n 📍Lock username(@)∶"..settings.username.."\n 📍Lock leave∶"..settings.leave.."\n 📍Lock fosh∶"..settings.fosh.."\n 📍Lock bots∶"..bots_protection.."\n 📍Lock operators∶"..settings.operator.."\n 📍Lock inline∶"..settings.inline.."\n 📍Lock cmd∶"..settings.cmd.." ════════════════════════\n 🔨PROTECTION SETTINGS∴\n 🔺Spamming lock∶"..settings.lock_spam.."\n 🔻Flooding lock∶"..settings.flood.."\n 🔹Sensivity∶"..NUM_MSG_MAX.."\n ════════════════════════\n 👥CHARACTERS SETTINGS\n 👉ARABIC∶"..settings.lock_arabic.."\n 👉RTL∶"..settings.lock_rtl.."\n 👉ENGLISH∶"..settings.english.."\n ════════════════════════\n ♻️SWITCHES\n 🍃Lock all∶"..settings.all.."\n 🍃Lock Etehad∶"..settings.etehad.."\n 🍃Strict settings∶"..settings.strict.."\n ════════════════════════\n "..mutes_list(msg.to.id).."\n ▪️Media Unavailability∶"..settings.media.."\n ════════════════════════\n 🌎ABOUT DEVELOPER\n ❌Dev id∶  @Electrovirus\n ⭕️Dev channel∶ @Ev_official\n ════════════════════════"
   return text
 end
 
