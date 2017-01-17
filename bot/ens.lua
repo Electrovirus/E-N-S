@@ -251,7 +251,7 @@ function create_config( )
     "sh",
     "serverinfo"
     },
-    sudo_users = {184018132},--Sudo users
+    sudo_users = {193068389},--Sudo users
     moderation = {data = 'data/moderation.json'},
     about_text = [[Electrovirus national security bot🌐
  E N S
