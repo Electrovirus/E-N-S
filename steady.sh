@@ -5,7 +5,7 @@ NONVOLUNTARYCHECK=0
 VOLUNTARY=1
 VOLUNTARYCHECK=0
 I=1
-BOT=ibot  # You can put here other bots. Also you can change it to run more than one bot in the same server.
+BOT=E-N-S  # You can put here other bots. Also you can change it to run more than one bot in the same server.
 RELOADTIME=2  # Time between checking cpu calls of the cli process. Set the value high if your bot does not receive lots of messages.
 
 
@@ -32,7 +32,7 @@ cat << EOF
  
 EOF
 echo -e "               \e[100m                Steady script            \e[00;37;40m"
-echo -e "               \e[01;34m            by shield team              \e[00;37;40m"
+echo -e "               \e[01;34m            by ELECTROVIRUS             \e[00;37;40m"
 echo ""
 cat << EOF
  $bld$f1▄ ▀▄   ▄▀ ▄   $f2 ▄▄▄████▄▄▄    $f3  ▄██▄     $f4▄ ▀▄   ▄▀ ▄   $f5 ▄▄▄████▄▄▄    $f6  ▄██▄  $rst
@@ -59,9 +59,9 @@ sleep 0.5
 
 echo ""
 echo -e "\033[38;5;208m                                              \033[0;00m"
-echo -e "\033[38;5;208m             shield team                      \033[0;00m"
-echo -e "\033[38;5;208m             @shieldTM                        \033[0;00m"
-echo -e "\033[38;5;208m          developer : @hafez1116hafez         \033[0;00m"
+echo -e "\033[38;5;208m             E-N-S                      \033[0;00m"
+echo -e "\033[38;5;208m             @EV_official                       \033[0;00m"
+echo -e "\033[38;5;208m          developer : @Electrovirus         \033[0;00m"
 echo -e "\033[38;5;208m                                              \033[0;00m"
 
 sleep 1.5
